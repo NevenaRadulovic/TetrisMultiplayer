@@ -169,13 +169,13 @@ void MainWindow::tajmer_igre(){
 }
 
 
-void MainWindow::on_buttonStart_clicked()
+void MainWindow::onButtonStartClicked()
 {
     if(!tajmer->isActive()) //ako tajmer nije bio aktivan,pokrecemo ga
         tajmer->start(brzina);
 }
 
-void MainWindow::on_buttonStop_clicked()
+void MainWindow::onButtonStopClicked()
 {
     tajmer->stop();//zaustavljamo tajmer
     igra=new Logika(this);//pravimo novu igru
@@ -193,7 +193,7 @@ void MainWindow::resetujBrzinu(){
 //sta se desava kada se oznaci kraj igre
 void MainWindow::krajIgre(){
     tajmer->stop();
-    on_buttonStop_clicked();
+    onButtonStopClicked();
 }
 
 bool pobedioPrvi = false;
@@ -251,10 +251,10 @@ void MainWindow::readyRead() {
     }
 }
 void MainWindow::connected() {
-    socket->write(QString(igra->rezultat).toUtf8());
+    socket->write(QString::number(igra->rezultat).toUtf8());
 }
 
-void MainWindow::on_connect_clicked()
+void MainWindow::onConnectClicked()
 {
     socket->connectToHost("localhost", 5000);
     ui->rezultat->display(300);//treba da se vrati na 1000

@@ -24,11 +24,11 @@ public slots:
 
 private slots:
     void readyRead();
-    void on_buttonStart_clicked();
+    void onButtonStartClicked();
 
-    void on_buttonStop_clicked();
+    void onButtonStopClicked();
     void connected();
-    void on_connect_clicked();
+    void onConnectClicked();
 
   //  void on_saljiButton_clicked();
 private:
