@@ -15,7 +15,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     private slots:
-    void on_exit_button_clicked();
+    void onExitButtonClicked();
 
 private:
     Ui::MainWindow *ui;
