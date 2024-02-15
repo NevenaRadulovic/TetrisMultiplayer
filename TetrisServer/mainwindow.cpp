@@ -23,7 +23,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_exit_button_clicked()
 {
     //treba odraditi gasenje servera na dugme
     //mislim da je ovo resenje...
